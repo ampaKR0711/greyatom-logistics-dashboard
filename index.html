@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreyAtom Logistics - Internal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GreyAtom Logistics</h1>
+        <p>Internal Operations Tools Team</p>
+    </header>
+
+    <div class="container">
+        <section class="form-container">
+            <h2>Report Delivery Exception</h2>
+            <form id="exceptionForm">
+                <label>Delivery ID *</label>
+                <input type="text" id="deliveryId" required>
+
+                <label>Customer Name *</label>
+                <input type="text" id="customerName" required>
+
+                <label>Issue Type *</label>
+                <select id="issueType" required>
+                    <option value="">-- Select Issue --</option>
+                    <option value="Address Not Found">Address Not Found</option>
+                    <option value="Customer Not Available">Customer Not Available</option>
+                    <option value="Payment Issue">Payment Issue</option>
+                    <option value="Package Damaged">Package Damaged</option>
+                </select>
+
+                <label>Priority *</label>
+                <div class="radio-group">
+                    <input type="radio" name="priority" value="Low" required> Low
+                    <input type="radio" name="priority" value="Medium"> Medium
+                    <input type="radio" name="priority" value="High"> High
+                </div>
+
+                <label>Notes (Optional)</label>
+                <textarea id="notes" rows="3"></textarea>
+
+                <button type="submit" id="submitBtn">Submit Report</button>
+            </form>
+        </section>
+
+        <section class="dashboard-container">
+            <h2>Exceptions Dashboard</h2>
+            
+            <div class="filters">
+                <select id="filterIssue">
+                    <option value="all">All Issue Types</option>
+                    <option value="Address Not Found">Address Not Found</option>
+                    <option value="Customer Not Available">Customer Not Available</option>
+                    <option value="Payment Issue">Payment Issue</option>
+                    <option value="Package Damaged">Package Damaged</option>
+                </select>
+
+                <select id="filterStatus">
+                    <option value="all">All Statuses</option>
+                    <option value="Open">Open</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+            </div>
+
+            <table id="dashboardTable">
+                <thead>
+                    <tr>
+                        <th>Delivery ID</th>
+                        <th>Customer</th>
+                        <th>Issue Type</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
