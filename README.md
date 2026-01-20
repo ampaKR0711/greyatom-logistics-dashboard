@@ -1,5 +1,7 @@
-# greyatom-logistics-dashboard
+# Greyatom Logistics Dashboard
+
 ## Delivery Exception Management Dashboard
+
 
 ## Overview
 This project is a specialized internal operations tool designed for GreyAtom Logistics to manage and track delivery exceptions in real-time. It provides a centralized interface for operations teams to report issues (such as damaged packages or incorrect addresses) and track their resolution status.
